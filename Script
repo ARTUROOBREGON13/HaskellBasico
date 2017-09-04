@@ -1,0 +1,7 @@
+dividir :: Integer -> Integer -> Integer
+dividir n m = if(n < m) then  0
+              else 1 + dividir (n-m) m
+
+base2 :: Integer -> Integer
+base2 x = if x < 2 then 1 
+            else mod x 2 + 10*base2 (quot x 2)
