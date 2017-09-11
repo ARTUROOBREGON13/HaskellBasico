@@ -5,3 +5,10 @@ dividir n m = if(n < m) then  0
 base2 :: Integer -> Integer
 base2 x = if x < 2 then 1 
             else mod x 2 + 10*base2 (quot x 2)
+            
+base10 :: Integer -> Integer 
+base10 0 = 0
+base10 1 = 1
+base10 n = n `mod` 10 + (2*baseDiez (quot n 10))
+
+
